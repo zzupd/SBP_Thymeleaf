@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/style/style.css?v">
+</head>
+<body>
+	<div id="wrap">
+		
+		<a th:href="@{/(num=${5}, txt=${'블루베리'})}">메인으로 이동</a>
+		
+		
+		<p th:text="|전체 개수 : ${listData.size}|"></p>
+		
+		<p>index : value</p>
+		<th:block th:each="abc : ${listData}">
+		
+			<p th:text="|${abcStat.index} : ${abc}|"></p>
+		
+		</th:block>
+		
+	</div>
+	<!-- div#wrap -->
+	<script src="/script/jquery-3.7.1.min.js"></script>
+	<script src="/script/script.js"></script>
+</body>
+</html>
